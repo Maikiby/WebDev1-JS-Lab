@@ -1,4 +1,4 @@
-/****************** YOUR NAME: 
+/****************** YOUR NAME: SERGIO NICOLAS MARTINEZ VALENCIA
 
 The instructions describe the missing logic that is needed; you will translate these into JavaScript in the places indicated.
 
@@ -11,9 +11,8 @@ You are encouraged to use the provided naming convention for ease of review.
 
 // INSERT YOUR CODE HERE
 
-
-
-
+let modelName = 'XYZ';
+let duration = 0;
 
 /****************** helper function ******************/
 /* create a function called recalculate() which will
@@ -27,10 +26,22 @@ You are encouraged to use the provided naming convention for ease of review.
 
 // INSERT YOUR CODE HERE
 
+function recalculate() {
+
+    let cost;
+    
+    if (modelName === "XYZ") {
+
+        cost = duration * 100;
+
+    } else if ( modelName === "CPRG") {
 
 
+        cost = duration * 213;
+    }
 
-
+    calculatedCost = cost.toFixed(2);
+}
 
 /****************** model button logic ******************/
 
@@ -46,11 +57,18 @@ You are encouraged to use the provided naming convention for ease of review.
 
 // INSERT YOUR CODE HERE
 
+function changeModel() {
 
+    const name = modelText.innerHTML;
 
+    if (name === "Model XYZ") {
+        modelText.innerHTML = "Model CPRG"
+    } else if (name === "Model CPRG") {
+        modelText.innerHTML = "Model XYZ"
+    }
+}
 
-
-
+modelButton.addEventListener("click", changeModel);
 
 /****************** duration button logic ******************/
 /*  - first, create a variable to represent the "Change Duration" pseudo-button.
