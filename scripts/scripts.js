@@ -36,12 +36,13 @@ function recalculate() {
 
     } else if ( modelName === "CPRG") {
 
-
         cost = duration * 213;
     }
 
-    calculatedCost = cost.toFixed(2);
+    calculatedCost.innerHTML = cost.toFixed(2);
+
 }
+
 
 /****************** model button logic ******************/
 
@@ -63,9 +64,13 @@ function changeModel() {
 
     if (name === "Model XYZ") {
         modelText.innerHTML = "Model CPRG"
+        modelName = "CPRG"
     } else if (name === "Model CPRG") {
         modelText.innerHTML = "Model XYZ"
+        modelName = "XYZ"
     }
+
+    recalculate();
 }
 
 modelButton.addEventListener("click", changeModel);
@@ -83,5 +88,20 @@ modelButton.addEventListener("click", changeModel);
 
 // INSERT YOUR CODE HERE
 
+function changeDuration() {
+    
+    const durationValue = durationText.innerHTML;
 
+    const input = prompt("Enter duration: ")
 
+    if (duration != null) {
+
+        duration = parseInt(input)
+
+        durationText.innerHTML = duration
+
+        recalculate();
+    }
+}
+
+durationButton.addEventListener("click", changeDuration)
