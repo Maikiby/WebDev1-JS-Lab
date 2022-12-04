@@ -63,11 +63,11 @@ function changeModel() {
     const name = modelText.innerHTML;
 
     if (name === "Model XYZ") {
-        modelText.innerHTML = "Model CPRG"
-        modelName = "CPRG"
+        modelText.innerHTML = "Model CPRG";
+        modelName = "CPRG";
     } else if (name === "Model CPRG") {
-        modelText.innerHTML = "Model XYZ"
-        modelName = "XYZ"
+        modelText.innerHTML = "Model XYZ";
+        modelName = "XYZ";
     }
 
     recalculate();
@@ -90,18 +90,16 @@ modelButton.addEventListener("click", changeModel);
 
 function changeDuration() {
     
-    const durationValue = durationText.innerHTML;
-
-    const input = prompt("Enter duration: ")
+    const input = prompt("Enter duration: ");
 
     if (duration != null) {
 
-        duration = parseInt(input)
+        duration = parseInt(input);
 
-        durationText.innerHTML = duration
+        durationText.innerHTML = duration;
 
         recalculate();
     }
 }
 
-durationButton.addEventListener("click", changeDuration)
+durationButton.addEventListener("click", changeDuration);
